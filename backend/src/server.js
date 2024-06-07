@@ -8,7 +8,7 @@ const nodemailer = require('nodemailer');
 
 const BASE_URL = process.env.BASE_URL;
 const DATABASE_URL = process.env.DATABASE_URL;
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -379,6 +379,6 @@ app.post('/questions/:id/ansOutput', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log(`Server is running on ${BASE_URL}`);
 });
